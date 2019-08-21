@@ -1,0 +1,17 @@
+импортировать тензор потока как tf 
+mnist = tf . keras . наборы данных . mnist 
+
+( x_train , y_train ), ( x_test , y_test ) = mnist . load_data () x_train , x_test = x_train / 255,0 , x_test / 255,0 модель = тс . keras . модели . Последовательный ([   тф . 
+  
+
+
+keras . слои . Flatten ( input_shape = ( 28 , 28 )),   ТФ . keras . слои . Плотный ( 512 , активация = tf . Nn . Relu ),   tf . keras . слои . Выпадение ( 0,2 ),   тс . keras . слои . Плотный ( 10 , активация = TF 
+
+
+, пп . softmax ) ]) модель . Скомпилируйте ( оптимизатор = 'Адам' ,               потеря = 'sparse_categorical_crossentropy' ,               метрики = [ 'точность' ]) модель . подходит ( x_train , y_train , эпохи = 5 ) модели . оценить ( x_test , y_test )
+
+
+
+
+
+
